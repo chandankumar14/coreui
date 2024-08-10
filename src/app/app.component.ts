@@ -11,7 +11,7 @@ import { iconSubset } from './icons/icon-subset';
   imports: [RouterOutlet]
 })
 export class AppComponent implements OnInit {
-  title = 'CoreUI';
+  title = 'Softechwhiz.com';
 
   constructor(
     private router: Router,
