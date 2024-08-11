@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { RowComponent, ColComponent, TextColorDirective, CardComponent, CardHeaderComponent, CardBodyComponent} from '@coreui/angular';
-import { DocsExampleComponent } from '@docs-components/public-api';
+import { RowComponent, ColComponent, CardComponent, CardHeaderComponent, CardBodyComponent } from '@coreui/angular';
 
 @Component({
   selector: 'app-product',
@@ -10,19 +9,16 @@ import { DocsExampleComponent } from '@docs-components/public-api';
   imports: [
     RowComponent,
     ColComponent,
-    TextColorDirective,
     CardComponent,
     CardHeaderComponent,
     CardBodyComponent,
-    DocsExampleComponent,
+    
   ]
 })
 export class ProductsComponent {
 
-  items = [1, 2, 3, 4];
-
   constructor(
-    
+
   ) { }
 
 

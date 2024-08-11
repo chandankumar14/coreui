@@ -22,7 +22,7 @@ export const routes: Routes = [
 
       {
         path: 'add_product',
-        loadComponent: () => import('./add_products/cards.component').then(m => m.CardsComponent),
+        loadComponent: () => import('./add_products/add-product.component').then(m => m.AddProductComponent),
         data: {
           title: 'Add Product'
         }
@@ -30,7 +30,7 @@ export const routes: Routes = [
 
       {
         path: 'add_variant',
-        loadComponent: () => import('./add_variants/tables.component').then(m => m.TablesComponent),
+        loadComponent: () => import('./add_variants/add-variant.component').then(m => m.AddVariantComponent),
         data: {
           title: 'Add product Variant'
         }

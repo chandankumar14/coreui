@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { RowComponent, ColComponent, CardComponent, CardHeaderComponent, CardBodyComponent, ContainerComponent } from '@coreui/angular';
 
 @Component({
-  selector: 'app-tables',
-  templateUrl: './tables.component.html',
-  styleUrls: ['./tables.component.scss'],
+  selector: 'app-add-variant',
+  templateUrl: './add-variant.component.html',
+  styleUrls: ['./add-variant.component.scss'],
   standalone: true,
   imports: [
     RowComponent,
@@ -15,7 +15,7 @@ import { RowComponent, ColComponent, CardComponent, CardHeaderComponent, CardBod
    ContainerComponent
   ]
 })
-export class TablesComponent {
+export class AddVariantComponent {
 
   constructor() { }
 
