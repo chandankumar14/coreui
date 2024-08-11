@@ -12,45 +12,46 @@ export const navItems: INavData[] = [
   },
   {
     name: 'Product',
-    url: '/base',
-    iconComponent: { name: 'cil-puzzle' },
+    url: '/product',
+    iconComponent: {name: 'cil-notes' },
     children: [
       {
         name: 'Product',
-        url: '/base/accordion',
+        url: '/product/product_list',
         icon: 'nav-icon-bullet',
       },
       {
-        name: 'Product_Variant',
-        url: '/base/pagination',
+        name: 'Add_Product',
+        url: '/product/add_product',
         icon: 'nav-icon-bullet',
       },
       {
-        name: 'Add Product',
-        url: '/base/placeholder',
+        name: 'Add Variant',
+        url: '/product/add_variant',
         icon: 'nav-icon-bullet',
       },
-      
+
     ],
   },
   {
     name: 'Order',
-    url: '/buttons',
-    iconComponent: { name: 'cil-cursor' },
+    url: '/order',
+    iconComponent: { name: 'cil-notes' },
     children: [
+      
       {
-        name: 'Order',
-        url: '/buttons/buttons',
-        icon: 'nav-icon-bullet',
-      },
-      {
-        name: 'Active order',
-        url: '/buttons/button-groups',
+        name: 'Active',
+        url: '/order/active_order',
         icon: 'nav-icon-bullet',
       },
       {
         name: 'Delivered',
-        url: '/buttons/dropdowns',
+        url: '/order/completed_order',
+        icon: 'nav-icon-bullet',
+      },
+      {
+        name: 'Cancelled',
+        url: '/order/cancelled_order',
         icon: 'nav-icon-bullet',
       },
     ],
@@ -70,17 +71,11 @@ export const navItems: INavData[] = [
         url: '/forms/select',
         icon: 'nav-icon-bullet',
       },
-      
-     
-     
+
+
+
     ],
   },
-  {
-    name: 'Charts',
-    iconComponent: { name: 'cil-chart-pie' },
-    url: '/charts',
-  },
- 
   {
     name: 'Notifications',
     url: '/notifications',
@@ -108,6 +103,6 @@ export const navItems: INavData[] = [
       },
     ],
   },
-  
- 
- ];
+
+
+];
