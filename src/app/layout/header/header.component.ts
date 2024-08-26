@@ -29,8 +29,8 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { delay, filter, map, tap } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-default-header',
-  templateUrl: './default-header.component.html',
+  selector: 'app-header',
+  templateUrl: './header.component.html',
   standalone: true,
   imports: [
     ContainerComponent,
