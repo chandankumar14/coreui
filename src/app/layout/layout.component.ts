@@ -14,13 +14,13 @@ import {
   SidebarTogglerDirective,
 } from '@coreui/angular';
 
-import { DefaultFooterComponent, DefaultHeaderComponent } from './';
+import { DefaultFooterComponent, DefaultHeaderComponent } from '.';
 import { navItems } from './_nav';
 
 @Component({
   selector: 'app-dashboard',
-  templateUrl: './default-layout.component.html',
-  styleUrls: ['./default-layout.component.scss'],
+  templateUrl: './layout.component.html',
+  styleUrls: ['./layout.component.scss'],
   standalone: true,
   imports: [
     SidebarComponent,
@@ -40,7 +40,7 @@ import { navItems } from './_nav';
     DefaultFooterComponent,
   ],
 })
-export class DefaultLayoutComponent {
+export class LayoutComponent {
   public navItems = navItems;
 
   onScrollbarUpdate($event: any) {

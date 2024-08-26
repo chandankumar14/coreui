@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { DefaultLayoutComponent } from './layout';
+import { LayoutComponent } from './layout';
 
 export const routes: Routes = [
   {
@@ -9,7 +9,7 @@ export const routes: Routes = [
   },
   {
     path: '',
-    component: DefaultLayoutComponent,
+    component: LayoutComponent,
     data: {
       title: 'Home'
     },
