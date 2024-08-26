@@ -14,7 +14,7 @@ export const routes: Routes = [
       },
       {
         path: 'customers',
-        loadComponent: () => import('./buttons/buttons.component').then(m => m.ButtonsComponent),
+        loadComponent: () => import('./customer/customer.component').then(m => m.ButtonsComponent),
         data: {
           title: 'customers'
         }

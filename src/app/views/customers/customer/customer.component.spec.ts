@@ -5,7 +5,7 @@ import { ButtonModule, CardModule, GridModule } from '@coreui/angular';
 import { IconModule } from '@coreui/icons-angular';
 import { IconSetService } from '@coreui/icons-angular';
 import { iconSubset } from '../../../icons/icon-subset';
-import { ButtonsComponent } from './buttons.component';
+import { ButtonsComponent } from './customer.component';
 
 describe('ButtonsComponent', () => {
   let component: ButtonsComponent;

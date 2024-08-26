@@ -23,7 +23,7 @@ export const routes: Routes = [
         loadChildren: () => import('./views/products/routes').then((m) => m.routes)
       },
       {
-        path: 'buttons',
+        path: 'customer',
         loadChildren: () => import('./views/customers/routes').then((m) => m.routes)
       },
       {
