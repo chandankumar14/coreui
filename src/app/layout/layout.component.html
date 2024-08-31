@@ -2,28 +2,12 @@
 <c-sidebar
   #sidebar1="cSidebar"
   class="d-print-none sidebar sidebar-fixed border-end"
-  colorScheme="dark"
+  colorScheme="light"
   id="sidebar1"
   visible
 >
   <c-sidebar-header class="border-bottom">
-    <c-sidebar-brand [routerLink]="[]">
-      <svg
-        [class]="{ icon: false }"
-        cIcon
-        class="sidebar-brand-full"
-        height="32"
-        name="logo"
-        title="Softechwhiz"
-      ></svg>
-      <svg
-        cIcon
-        class="sidebar-brand-narrow"
-        height="32"
-        name="signet"
-        title="Softechwhiz"
-      ></svg>
-    </c-sidebar-brand>
+    <c-sidebar-brand [routerLink]="[]"> Brand </c-sidebar-brand>
   </c-sidebar-header>
 
   <ng-scrollbar
@@ -55,7 +39,7 @@
 <!--main-->
 <div class="wrapper d-flex flex-column min-vh-100">
   <!--app-header-->
-  <app-default-header
+  <app-header
     [cShadowOnScroll]="'sm'"
     class="mb-4 d-print-none header header-sticky p-0 shadow-sm"
     position="sticky"
@@ -68,5 +52,5 @@
     </c-container>
   </div>
   <!--app footer-->
-  <app-default-footer />
+  <app-footer />
 </div>

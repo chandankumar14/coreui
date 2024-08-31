@@ -59,7 +59,7 @@ import { delay, filter, map, tap } from 'rxjs/operators';
     NgStyle,
   ],
 })
-export class DefaultHeaderComponent extends HeaderComponent {
+export class HeaderComponentLayOut extends HeaderComponent {
   readonly #activatedRoute: ActivatedRoute = inject(ActivatedRoute);
   readonly #colorModeService = inject(ColorModeService);
   readonly colorMode = this.#colorModeService.colorMode;

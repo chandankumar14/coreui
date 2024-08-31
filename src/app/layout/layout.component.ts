@@ -14,7 +14,7 @@ import {
   SidebarTogglerDirective,
 } from '@coreui/angular';
 
-import { DefaultFooterComponent, DefaultHeaderComponent } from '.';
+import { FooterComponent, HeaderComponentLayOut } from '.';
 import { navItems } from './_nav';
 
 @Component({
@@ -33,11 +33,11 @@ import { navItems } from './_nav';
     SidebarFooterComponent,
     SidebarToggleDirective,
     SidebarTogglerDirective,
-    DefaultHeaderComponent,
+    HeaderComponentLayOut,
     ShadowOnScrollDirective,
     ContainerComponent,
     RouterOutlet,
-    DefaultFooterComponent,
+    FooterComponent,
   ],
 })
 export class LayoutComponent {

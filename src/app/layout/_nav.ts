@@ -2,31 +2,31 @@ import { INavData } from '@coreui/angular';
 
 export const navItems: INavData[] = [
   {
-    name: 'Saatika',
+    name: 'dashboard',
     url: '/dashboard',
     iconComponent: { name: 'cil-speedometer' },
   },
   {
-    name: 'Product',
+    name: 'P',
     title: true,
   },
   {
-    name: 'Product',
+    name: 'P',
     url: '/product',
     iconComponent: {name: 'cil-notes' },
     children: [
       {
-        name: 'Product',
+        name: 'P',
         url: '/product/product_list',
         icon: 'nav-icon-bullet',
       },
       {
-        name: 'Add_Product',
+        name: 'Add',
         url: '/product/add_product',
         icon: 'nav-icon-bullet',
       },
       {
-        name: 'Add Variant',
+        name: 'Add',
         url: '/product/add_variant',
         icon: 'nav-icon-bullet',
       },
@@ -34,7 +34,7 @@ export const navItems: INavData[] = [
     ],
   },
   {
-    name: 'Order',
+    name: 'O',
     url: '/order',
     iconComponent: { name: 'cil-notes' },
     children: [
@@ -45,19 +45,19 @@ export const navItems: INavData[] = [
         icon: 'nav-icon-bullet',
       },
       {
-        name: 'Delivered',
+        name: 'D',
         url: '/order/completed_order',
         icon: 'nav-icon-bullet',
       },
       {
-        name: 'Cancelled',
+        name: 'C',
         url: '/order/cancelled_order',
         icon: 'nav-icon-bullet',
       },
     ],
   },
   {
-    name: 'Payment',
+    name: 'Pay',
     url: '/forms',
     iconComponent: { name: 'cil-notes' },
     children: [
