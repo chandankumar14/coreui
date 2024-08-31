@@ -1,17 +1,9 @@
-// scrollbar tinkering
-
 @supports (scrollbar-width: thin) {
   * {
     scrollbar-width: thin;
     scrollbar-color: #444 transparent;
   }
 }
-
-//::-webkit-scrollbar {
-//  width: .7em;
-//  height: .7em;
-//}
-
 ::-webkit-scrollbar-track {
   background: var(--cui-body-bg, #fff);
   border-radius: 100vw;
@@ -41,8 +33,7 @@
 }
 
 .ng-scrollbar:not(.overflow) .ng-scrollbar-wrapper[verticalused="false"] {
-  //background-color: #e797a5;
-    .ng-scroll-viewport {
+.ng-scroll-viewport {
       display: flex;
     }
 }
