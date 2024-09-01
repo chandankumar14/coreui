@@ -19,8 +19,7 @@ import { ColDef } from 'ag-grid-community';
   ]
 })
 export class ProductsComponent {
-
-  constructor(
+constructor(
 
   ) { }
 
