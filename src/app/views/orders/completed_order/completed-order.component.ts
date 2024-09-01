@@ -3,6 +3,8 @@ import { NgStyle } from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { DocsExampleComponent } from '@docs-components/public-api';
 import { RowComponent, ColComponent, TextColorDirective, CardComponent, CardHeaderComponent, CardBodyComponent, FormFloatingDirective, FormControlDirective, FormLabelDirective, FormDirective, FormSelectDirective, GutterDirective } from '@coreui/angular';
+import { AgGridAngular } from 'ag-grid-angular';
+import { ColDef } from 'ag-grid-community';
 
 @Component({
   selector: 'app-completed-order',
@@ -11,15 +13,14 @@ import { RowComponent, ColComponent, TextColorDirective, CardComponent, CardHead
   standalone: true,
   imports: [RowComponent,
     ColComponent,
-    TextColorDirective,
     CardComponent,
     CardHeaderComponent,
     CardBodyComponent,
-    DocsExampleComponent,
     FormFloatingDirective,
     FormControlDirective,
     FormLabelDirective,
     ReactiveFormsModule,
+    AgGridAngular,
     FormsModule,
     FormDirective,
     NgStyle,
@@ -29,5 +30,24 @@ import { RowComponent, ColComponent, TextColorDirective, CardComponent, CardHead
 export class CompletedOrderComponent {
 
   constructor() { }
+
+  colDefs: ColDef[] = [
+    { field: "make" },
+    { field: "model" },
+    { field: "price" },
+    { field: "electric" },
+    { field: "electric" }
+  ];
+  rowData = [
+    { make: "Tesla", model: "Model Y", price: 64950, electric: true },
+    { make: "Ford", model: "F-Series", price: 33850, electric: false },
+    { make: "Toyota", model: "Corolla", price: 29600, electric: false },
+    { make: "Ford", model: "F-Series", price: 33850, electric: false },
+    { make: "Toyota", model: "Corolla", price: 29600, electric: false },
+    { make: "Ford", model: "F-Series", price: 33850, electric: false },
+    { make: "Toyota", model: "Corolla", price: 29600, electric: false },
+    { make: "Ford", model: "F-Series", price: 33850, electric: false },
+    { make: "Toyota", model: "Corolla", price: 29600, electric: false },
+  ];
 
 }

@@ -1,60 +1,50 @@
-import { Component } from '@angular/core';
-import { FormControl, UntypedFormBuilder, ReactiveFormsModule } from '@angular/forms';
-import { DocsExampleComponent } from '@docs-components/public-api';
-import { RowComponent, FormDirective, ColComponent, TextColorDirective, CardComponent, CardHeaderComponent, CardBodyComponent, FormCheckComponent, FormCheckInputDirective, FormCheckLabelDirective, ButtonGroupComponent, ButtonDirective } from '@coreui/angular';
+import { Component, OnInit } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RowComponent, FormDirective, ColComponent, CardComponent, CardHeaderComponent, CardBodyComponent } from '@coreui/angular';
+import { AgGridAngular } from 'ag-grid-angular';
+import { ColDef } from 'ag-grid-community';
 
 @Component({
-    selector: 'app-active-order',
-    templateUrl: './active-order.component.html',
-    styleUrls: ['./active-order.component.scss'],
-    standalone: true,
-    imports: [RowComponent, ReactiveFormsModule, FormDirective, ColComponent, TextColorDirective, CardComponent, CardHeaderComponent, CardBodyComponent, DocsExampleComponent, FormCheckComponent, FormCheckInputDirective, FormCheckLabelDirective, ButtonGroupComponent, ButtonDirective]
+  selector: 'app-active-order',
+  templateUrl: './active-order.component.html',
+  styleUrls: ['./active-order.component.scss'],
+  standalone: true,
+  imports: [
+    RowComponent,
+    ReactiveFormsModule,
+    FormDirective,
+    AgGridAngular,
+    CardComponent,
+    CardHeaderComponent,
+    ColComponent,
+    CardBodyComponent,
+  ]
 })
-export class ActiveOrderComponent {
-
-inputDisabled: null = null;
-
-  formGroup = this.formBuilder.group({
-    flexRadioGroup: this.formBuilder.group({
-      flexRadioDefault: this.formBuilder.control('two')
-    }),
-    flexRadioGroupDisabled: this.formBuilder.group({
-      flexRadioDefault: this.formBuilder.control({ value: 'two', disabled: true })
-    }),
-    flexCheckGroup: this.formBuilder.group({
-      checkOne: [false],
-      checkTwo: [true]
-    }),
-    flexCheckGroupDisabled: this.formBuilder.group({
-      checkThree: [{ value: false, disabled: true }],
-      checkFour: [{ value: true, disabled: true }]
-    }),
-    btnCheckGroup: this.formBuilder.group({
-      checkbox1: [true],
-      checkbox2: [false],
-      checkbox3: [{value: false, disabled: true}]
-    }),
-    btnRadioGroup: this.formBuilder.group({
-      radio1: this.formBuilder.control({ value: 'Radio2' })
-    })
-  });
-
-
+export class ActiveOrderComponent implements OnInit {
   constructor(
-    private formBuilder: UntypedFormBuilder
+
   ) { }
+  ngOnInit() {
 
-  setCheckBoxValue(controlName: string) {
-    const btnCheckGroup = this.formGroup.controls['btnCheckGroup'];
-    const prevValue = btnCheckGroup.get(controlName)?.value;
-    const groupValue = {...btnCheckGroup.value};
-    groupValue[controlName] = !prevValue;
-    btnCheckGroup.patchValue(groupValue);
   }
+  colDefs: ColDef[] = [
+    { field: "make" },
+    { field: "model" },
+    { field: "price" },
+    { field: "electric" },
+    { field: "electric" }
+  ];
+  rowData = [
+    { make: "Tesla", model: "Model Y", price: 64950, electric: true },
+    { make: "Ford", model: "F-Series", price: 33850, electric: false },
+    { make: "Toyota", model: "Corolla", price: 29600, electric: false },
+    { make: "Ford", model: "F-Series", price: 33850, electric: false },
+    { make: "Toyota", model: "Corolla", price: 29600, electric: false },
+    { make: "Ford", model: "F-Series", price: 33850, electric: false },
+    { make: "Toyota", model: "Corolla", price: 29600, electric: false },
+    { make: "Ford", model: "F-Series", price: 33850, electric: false },
+    { make: "Toyota", model: "Corolla", price: 29600, electric: false },
+  ];
 
-  setRadioValue(value: string): void {
-    const group = this.formGroup.controls['btnRadioGroup'];
-    group.setValue({ radio1: value });
-  }
 
 }

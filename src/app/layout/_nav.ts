@@ -7,16 +7,16 @@ export const navItems: INavData[] = [
     iconComponent: { name: 'cil-speedometer' },
   },
   {
-    name: 'P',
+    name: 'Product',
     title: true,
   },
   {
-    name: 'P',
+    name: 'Product',
     url: '/product',
     iconComponent: {name: 'cil-notes' },
     children: [
       {
-        name: 'P',
+        name: 'Product',
         url: '/product/product_list',
         icon: 'nav-icon-bullet',
       },
@@ -26,7 +26,7 @@ export const navItems: INavData[] = [
         icon: 'nav-icon-bullet',
       },
       {
-        name: 'Add',
+        name: 'variant',
         url: '/product/add_variant',
         icon: 'nav-icon-bullet',
       },
@@ -34,7 +34,7 @@ export const navItems: INavData[] = [
     ],
   },
   {
-    name: 'O',
+    name: 'Order',
     url: '/order',
     iconComponent: { name: 'cil-notes' },
     children: [
@@ -45,12 +45,12 @@ export const navItems: INavData[] = [
         icon: 'nav-icon-bullet',
       },
       {
-        name: 'D',
+        name: 'Delevered',
         url: '/order/completed_order',
         icon: 'nav-icon-bullet',
       },
       {
-        name: 'C',
+        name: 'Closed',
         url: '/order/cancelled_order',
         icon: 'nav-icon-bullet',
       },
