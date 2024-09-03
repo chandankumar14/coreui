@@ -1,5 +1,11 @@
 import { Component } from '@angular/core';
-import { RowComponent, ColComponent, CardComponent, CardHeaderComponent, CardBodyComponent } from '@coreui/angular';
+import {
+  RowComponent,
+  ColComponent,
+  CardComponent,
+  CardHeaderComponent,
+  CardBodyComponent,
+} from '@coreui/angular';
 import { AgGridAngular } from 'ag-grid-angular';
 import { ColDef } from 'ag-grid-community';
 
@@ -14,33 +20,78 @@ import { ColDef } from 'ag-grid-community';
     CardComponent,
     CardHeaderComponent,
     CardBodyComponent,
-    AgGridAngular
-    
-  ]
+    AgGridAngular,
+  ],
 })
 export class ProductsComponent {
-constructor(
-
-  ) { }
+  constructor() {}
 
   colDefs: ColDef[] = [
-    { field: "Name" },
-    { field: "Category" },
-    { field: "price" },
-   { field: "InStock" },
-    { field: "Qty" }
+    {
+      headerName: 'Supplier Name',
+      field: 'Name',
+      sortable: true,
+      resizable: true,
+      wrapHeaderText: true,
+      autoHeaderHeight: true,
+      cellClass: 'grid-cell-centered',
+      flex: 1,
+      minWidth: 150,
+    },
+    {
+      headerName: 'Supplier Name',
+      field: 'Category',
+      sortable: true,
+      resizable: true,
+      wrapHeaderText: true,
+      autoHeaderHeight: true,
+      cellClass: 'grid-cell-centered',
+      flex: 1,
+      minWidth: 150,
+    },
+    {
+      headerName: 'Supplier Name',
+      field: 'price',
+      sortable: true,
+      resizable: true,
+      wrapHeaderText: true,
+      autoHeaderHeight: true,
+      cellClass: 'grid-cell-centered',
+      flex: 1,
+      minWidth: 150,
+    },
+    {
+      headerName: 'Supplier Name',
+      field: 'Status',
+      sortable: true,
+      resizable: true,
+      wrapHeaderText: true,
+      autoHeaderHeight: true,
+      cellClass: 'grid-cell-centered',
+      flex: 1,
+      minWidth: 150,
+    },
+    {
+      headerName: 'Supplier Name',
+      field: 'Name',
+      sortable: true,
+      resizable: true,
+      wrapHeaderText: true,
+      autoHeaderHeight: true,
+      cellClass: 'grid-cell-centered',
+      flex: 1,
+      minWidth: 150,
+    },
   ];
   rowData = [
-    { Name: "Tesla", Category: "Category Y", price: 64950, Status: true },
-    { Name: "Ford", Category: "F-Series", price: 33850, Status: false },
-    { Name: "Toyota", Category: "Corolla", price: 29600, Status: false },
-    { Name: "Ford", Category: "F-Series", price: 33850, Status: false },
-    { Name: "Toyota", Category: "Corolla", price: 29600, Status: false },
-    { Name: "Ford", Category: "F-Series", price: 33850, Status: false },
-    { Name: "Toyota", Category: "Corolla", price: 29600, Status: false },
-    { Name: "Ford", Category: "F-Series", price: 33850, Status: false },
-    { Name: "Toyota", Category: "Corolla", price: 29600, Status: false },
+    { Name: 'Tesla', Category: 'Category Y', price: 64950, Status: true },
+    { Name: 'Ford', Category: 'F-Series', price: 33850, Status: false },
+    { Name: 'Toyota', Category: 'Corolla', price: 29600, Status: false },
+    { Name: 'Ford', Category: 'F-Series', price: 33850, Status: false },
+    { Name: 'Toyota', Category: 'Corolla', price: 29600, Status: false },
+    { Name: 'Ford', Category: 'F-Series', price: 33850, Status: false },
+    { Name: 'Toyota', Category: 'Corolla', price: 29600, Status: false },
+    { Name: 'Ford', Category: 'F-Series', price: 33850, Status: false },
+    { Name: 'Toyota', Category: 'Corolla', price: 29600, Status: false },
   ];
-
-
 }
