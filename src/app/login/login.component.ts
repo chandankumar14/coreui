@@ -37,6 +37,6 @@ export class LoginComponent {
   submit() {
     const user = this.loginForm.controls['userName'].value;
     const password = this.loginForm.controls['password'].value;
-    this.router.navigateByUrl('/dashboard');
+    this.router.navigateByUrl('dashboard');
   }
 }
