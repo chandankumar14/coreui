@@ -31,22 +31,22 @@ export class CompletedOrderComponent {
   constructor() { }
 
   colDefs: ColDef[] = [
-    { field: "make" },
-    { field: "model" },
+    { field: "orderId" },
+    { field: "product" },
     { field: "price" },
-    { field: "electric" },
-    { field: "electric" }
+    { field: "userName" },
+    { field: "Status" }
   ];
   rowData = [
-    { make: "Tesla", model: "Model Y", price: 64950, electric: true },
-    { make: "Ford", model: "F-Series", price: 33850, electric: false },
-    { make: "Toyota", model: "Corolla", price: 29600, electric: false },
-    { make: "Ford", model: "F-Series", price: 33850, electric: false },
-    { make: "Toyota", model: "Corolla", price: 29600, electric: false },
-    { make: "Ford", model: "F-Series", price: 33850, electric: false },
-    { make: "Toyota", model: "Corolla", price: 29600, electric: false },
-    { make: "Ford", model: "F-Series", price: 33850, electric: false },
-    { make: "Toyota", model: "Corolla", price: 29600, electric: false },
+    {orderId:"AK635", product: "Tesla", userName: " Y", price: 64950, Status: true },
+    {orderId:"AK635", product: "Ford", userName: "F-Series", price: 33850, Status: false },
+    {orderId:"AK635", product: "Toyota", userName: "Corolla", price: 29600, Status: false },
+    { orderId:"AK635",product: "Ford", userName: "F-Series", price: 33850, Status: false },
+    {orderId:"AK635", product: "Toyota", userName: "Corolla", price: 29600, Status: false },
+    { orderId:"AK635",product: "Ford", userName: "F-Series", price: 33850, Status: false },
+    {orderId:"AK635", product: "Toyota", userName: "Corolla", price: 29600, Status: false },
+    {orderId:"AK635", product: "Ford", userName: "F-Series", price: 33850, Status: false },
+    {orderId:"AK635", product: "Toyota", userName: "Corolla", price: 29600, Status: false },
   ];
 
 }

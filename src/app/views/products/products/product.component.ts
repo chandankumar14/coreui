@@ -28,7 +28,7 @@ export class ProductsComponent {
 
   colDefs: ColDef[] = [
     {
-      headerName: 'Supplier Name',
+      headerName: 'Product Name',
       field: 'Name',
       sortable: true,
       resizable: true,
@@ -39,7 +39,7 @@ export class ProductsComponent {
       minWidth: 150,
     },
     {
-      headerName: 'Supplier Name',
+      headerName: 'Category',
       field: 'Category',
       sortable: true,
       resizable: true,
@@ -50,7 +50,7 @@ export class ProductsComponent {
       minWidth: 150,
     },
     {
-      headerName: 'Supplier Name',
+      headerName: 'Price',
       field: 'price',
       sortable: true,
       resizable: true,
@@ -60,9 +60,10 @@ export class ProductsComponent {
       flex: 1,
       minWidth: 150,
     },
+    
     {
-      headerName: 'Supplier Name',
-      field: 'Status',
+      headerName: 'Quantity',
+      field: 'qty',
       sortable: true,
       resizable: true,
       wrapHeaderText: true,
@@ -72,8 +73,8 @@ export class ProductsComponent {
       minWidth: 150,
     },
     {
-      headerName: 'Supplier Name',
-      field: 'Name',
+      headerName: 'Status',
+      field: 'Status',
       sortable: true,
       resizable: true,
       wrapHeaderText: true,
@@ -84,14 +85,14 @@ export class ProductsComponent {
     },
   ];
   rowData = [
-    { Name: 'Tesla', Category: 'Category Y', price: 64950, Status: true },
-    { Name: 'Ford', Category: 'F-Series', price: 33850, Status: false },
-    { Name: 'Toyota', Category: 'Corolla', price: 29600, Status: false },
-    { Name: 'Ford', Category: 'F-Series', price: 33850, Status: false },
-    { Name: 'Toyota', Category: 'Corolla', price: 29600, Status: false },
-    { Name: 'Ford', Category: 'F-Series', price: 33850, Status: false },
-    { Name: 'Toyota', Category: 'Corolla', price: 29600, Status: false },
-    { Name: 'Ford', Category: 'F-Series', price: 33850, Status: false },
-    { Name: 'Toyota', Category: 'Corolla', price: 29600, Status: false },
+    { Name: 'Tesla', Category: 'Category Y', qty: 64950, price: 64950, Status: true },
+    { Name: 'Ford', Category: 'F-Series',qty: 64950, price: 33850, Status: false },
+    { Name: 'Toyota', Category: 'Corolla',qty: 64950, price: 29600, Status: false },
+    { Name: 'Ford', Category: 'F-Series', qty: 64950,price: 33850, Status: false },
+    { Name: 'Toyota', Category: 'Corolla',qty: 64950, price: 29600, Status: false },
+    { Name: 'Ford', Category: 'F-Series',qty: 64950, price: 33850, Status: false },
+    { Name: 'Toyota', Category: 'Corolla',qty: 64950, price: 29600, Status: false },
+    { Name: 'Ford', Category: 'F-Series',qty: 64950, price: 33850, Status: false },
+    { Name: 'Toyota', Category: 'Corolla',qty: 64950, price: 29600, Status: false },
   ];
 }

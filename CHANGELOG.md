@@ -2,9 +2,26 @@
 
 ---
 
+#### `5.2.16`
+
+- chore(dependencies): update
+  - `tslib` to `^2.7.0`
+  - `micromatch` to `4.0.8`
+    - see vulnerability [Regular Expression Denial of Service (ReDoS) in micromatch](https://github.com/advisories/GHSA-952p-6rrq-rcjv)
+
+---
+
+#### `5.2.15`
+
+- chore(dependencies): update to `Angular 18.2`
+- refactor: move ColorModeService setup from default-header to app component
+- chore(karma.conf): add custom chrome launcher with `--disable-search-engine-choice-screen` flag
+
+---
+
 #### `5.2.5`
 
-- chore(dependencies): update to Angular 18.1
+- chore(dependencies): update to `Angular 18.1`
 - refactor(cards): card navigation update to the latest `tabs` api
 
 ---

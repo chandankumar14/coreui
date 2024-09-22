@@ -21,6 +21,11 @@ import {
 } from '@coreui/angular';
 import { ChartjsComponent } from '@coreui/angular-chartjs';
 import { IconDirective } from '@coreui/icons-angular';
+import { AgGridAngular } from 'ag-grid-angular';
+import { GridApi, GridReadyEvent, IFilterParams } from 'ag-grid-community';
+import { ColDef } from 'ag-grid-community';
+import { WidgetsBrandComponent } from '../widgets/widgets-brand/widgets-brand.component';
+import { WidgetsDropdownComponent } from '../widgets/widgets-dropdown/widgets-dropdown.component';
 import { DashboardChartsData, IChartProps } from './dashboard-charts-data';
 
 interface IUser {
@@ -41,7 +46,7 @@ interface IUser {
   templateUrl: 'dashboard.component.html',
   styleUrls: ['dashboard.component.scss'],
   standalone: true,
-  imports: [ TextColorDirective, CardComponent, CardBodyComponent, RowComponent, ColComponent, ButtonDirective, IconDirective, ReactiveFormsModule, ButtonGroupComponent, FormCheckLabelDirective, ChartjsComponent, NgStyle, CardFooterComponent, GutterDirective, ProgressBarDirective, ProgressComponent, CardHeaderComponent, TableDirective, AvatarComponent]
+  imports: [WidgetsDropdownComponent,  AgGridAngular, TextColorDirective, CardComponent, CardBodyComponent, RowComponent, ColComponent, ButtonDirective, IconDirective, ReactiveFormsModule, ButtonGroupComponent, FormCheckLabelDirective, ChartjsComponent, NgStyle, CardFooterComponent, GutterDirective, ProgressBarDirective, ProgressComponent, WidgetsBrandComponent, CardHeaderComponent, TableDirective, AvatarComponent]
 })
 export class DashboardComponent implements OnInit {
 
@@ -184,4 +189,22 @@ export class DashboardComponent implements OnInit {
       });
     }
   }
+  colDefs: ColDef[] = [
+    { field: "orderId" },
+    { field: "product" },
+    { field: "price" },
+    { field: "userName" },
+    { field: "Status" }
+  ];
+  rowData = [
+    {orderId:"AK635", product: "Tesla", userName: " Y", price: 64950, Status: true },
+    {orderId:"AK635", product: "Ford", userName: "F-Series", price: 33850, Status: false },
+    {orderId:"AK635", product: "Toyota", userName: "Corolla", price: 29600, Status: false },
+    { orderId:"AK635",product: "Ford", userName: "F-Series", price: 33850, Status: false },
+    {orderId:"AK635", product: "Toyota", userName: "Corolla", price: 29600, Status: false },
+    { orderId:"AK635",product: "Ford", userName: "F-Series", price: 33850, Status: false },
+    {orderId:"AK635", product: "Toyota", userName: "Corolla", price: 29600, Status: false },
+    {orderId:"AK635", product: "Ford", userName: "F-Series", price: 33850, Status: false },
+    {orderId:"AK635", product: "Toyota", userName: "Corolla", price: 29600, Status: false },
+  ];
 }
