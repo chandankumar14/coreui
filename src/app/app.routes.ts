@@ -1,39 +1,46 @@
 import { Routes } from '@angular/router';
 import { DefaultLayoutComponent } from './layout';
+import { LoginComponent } from './views/login/login.component';
 
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'dashboard',
-    pathMatch: 'full'
+    redirectTo: 'login',
+    pathMatch: 'full',
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
   },
   {
     path: '',
     component: DefaultLayoutComponent,
     data: {
-      title: 'Home'
+      title: 'Home',
     },
     children: [
       {
         path: 'dashboard',
-        loadChildren: () => import('./views/dashboard/routes').then((m) => m.routes)
+        loadChildren: () =>
+          import('./views/dashboard/routes').then((m) => m.routes),
       },
       {
-        path:'product',
-        loadChildren:()=>import("./views/products/routes").then((m)=>m.routes)
+        path: 'product',
+        loadChildren: () =>
+          import('./views/products/routes').then((m) => m.routes),
       },
       {
-        path:'orders',
-        loadChildren:()=>import("./views/orders/routes").then((m)=>m.routes)
+        path: 'orders',
+        loadChildren: () =>
+          import('./views/orders/routes').then((m) => m.routes),
       },
       {
         path: 'theme',
-        loadChildren: () => import('./views/theme/routes').then((m) => m.routes)
+        loadChildren: () =>
+          import('./views/theme/routes').then((m) => m.routes),
       },
-      
-    ]
+    ],
   },
-  
- 
-  { path: '**', redirectTo: 'dashboard' }
+
+  { path: '**', redirectTo: 'login' },
 ];
