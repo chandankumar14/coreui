@@ -8,10 +8,10 @@ import {
   CardBodyComponent,
 } from '@coreui/angular';
 import { AgGridAngular } from 'ag-grid-angular';
-import { ColDef } from 'ag-grid-community';
+import { ColDef,ICellRendererParams  } from 'ag-grid-community';
+import { environment } from 'src/app/environments/environment';
 import { PRODUCT } from 'src/app/model/product';
 import { ProductService } from 'src/app/service/product.service';
-
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -29,6 +29,7 @@ import { ProductService } from 'src/app/service/product.service';
 })
 export class ProductsComponent implements OnInit {
   ProductList: PRODUCT[] = []
+  BasePath = environment.imageBase
   constructor(private productService: ProductService) {
 
   }
@@ -36,6 +37,20 @@ export class ProductsComponent implements OnInit {
     this.getAllPrroductList()
    }
   colDefs: ColDef[] = [
+    {
+      headerName: 'Product',
+      field: 'modelFrontShot',
+      cellRenderer: (params:ICellRendererParams) => {
+        return `<img src="${this.BasePath}/${params.value}" alt="Product Image" style="width: 80px; height: 50px;" />`;
+      },
+      sortable: false,
+      resizable: true,
+      wrapHeaderText: true,
+      autoHeaderHeight: true,
+      cellClass: 'grid-cell-centered',
+      flex: 1,
+      minWidth: 100,
+    },
     {
       headerName: 'Product Name',
       field: 'productName',

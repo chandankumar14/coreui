@@ -46,7 +46,10 @@ export class AddProductComponent implements OnInit {
       modelAngle45Shot: [''],
       price: [''],
       quantity: [''],
-      category: ['']
+      category: [''],
+      skuCode: [''],
+      instock: [true],
+      isDeleted: [false]
     });
   }
   ngOnInit() {
