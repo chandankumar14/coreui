@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  BasePath:"http://localhost:4000/api/v1"
+  BasePath:"https://backend.saatikaa.co.in/api/v1"
 };

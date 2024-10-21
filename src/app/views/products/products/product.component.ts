@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import {
   RowComponent,
   ColComponent,
@@ -8,6 +9,8 @@ import {
 } from '@coreui/angular';
 import { AgGridAngular } from 'ag-grid-angular';
 import { ColDef } from 'ag-grid-community';
+import { PRODUCT } from 'src/app/model/product';
+import { ProductService } from 'src/app/service/product.service';
 
 @Component({
   selector: 'app-product',
@@ -21,15 +24,21 @@ import { ColDef } from 'ag-grid-community';
     CardHeaderComponent,
     CardBodyComponent,
     AgGridAngular,
+    RouterLink,
   ],
 })
-export class ProductsComponent {
-  constructor() {}
+export class ProductsComponent implements OnInit {
+  ProductList: PRODUCT[] = []
+  constructor(private productService: ProductService) {
 
+  }
+  ngOnInit() {
+    this.getAllPrroductList()
+   }
   colDefs: ColDef[] = [
     {
       headerName: 'Product Name',
-      field: 'Name',
+      field: 'productName',
       sortable: true,
       resizable: true,
       wrapHeaderText: true,
@@ -39,8 +48,8 @@ export class ProductsComponent {
       minWidth: 150,
     },
     {
-      headerName: 'Category',
-      field: 'Category',
+      headerName: 'productSize',
+      field: 'productSize',
       sortable: true,
       resizable: true,
       wrapHeaderText: true,
@@ -60,10 +69,10 @@ export class ProductsComponent {
       flex: 1,
       minWidth: 150,
     },
-    
+
     {
       headerName: 'Quantity',
-      field: 'qty',
+      field: 'quantity',
       sortable: true,
       resizable: true,
       wrapHeaderText: true,
@@ -74,7 +83,18 @@ export class ProductsComponent {
     },
     {
       headerName: 'Status',
-      field: 'Status',
+      field: 'isDeleted',
+      sortable: true,
+      resizable: true,
+      wrapHeaderText: true,
+      autoHeaderHeight: true,
+      cellClass: 'grid-cell-centered',
+      flex: 1,
+      minWidth: 150,
+    },
+    {
+      headerName: 'In Stoack',
+      field: 'inStock',
       sortable: true,
       resizable: true,
       wrapHeaderText: true,
@@ -84,15 +104,10 @@ export class ProductsComponent {
       minWidth: 150,
     },
   ];
-  rowData = [
-    { Name: 'Tesla', Category: 'Category Y', qty: 64950, price: 64950, Status: true },
-    { Name: 'Ford', Category: 'F-Series',qty: 64950, price: 33850, Status: false },
-    { Name: 'Toyota', Category: 'Corolla',qty: 64950, price: 29600, Status: false },
-    { Name: 'Ford', Category: 'F-Series', qty: 64950,price: 33850, Status: false },
-    { Name: 'Toyota', Category: 'Corolla',qty: 64950, price: 29600, Status: false },
-    { Name: 'Ford', Category: 'F-Series',qty: 64950, price: 33850, Status: false },
-    { Name: 'Toyota', Category: 'Corolla',qty: 64950, price: 29600, Status: false },
-    { Name: 'Ford', Category: 'F-Series',qty: 64950, price: 33850, Status: false },
-    { Name: 'Toyota', Category: 'Corolla',qty: 64950, price: 29600, Status: false },
-  ];
+
+  getAllPrroductList() {
+    this.productService.getAllPrroductList().subscribe(res => {
+      this.ProductList = res.data
+    })
+  }
 }

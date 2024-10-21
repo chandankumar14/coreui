@@ -5,16 +5,15 @@
         <div class="font-[sans-serif] flex-1">
           <button type="button" class="px-5 py-2.5 flex items-center text-sm 
             tracking-wider font-semibold outline-none text-white
-             bg-green-500 hover:bg-green-600 rounded ">
+             bg-green-500 hover:bg-green-600 rounded " [routerLink]="['/product/add_product']">
             Add Product
           </button>
         </div>
       </c-card-header>
       <c-card-body>
-
-        <ag-grid-angular class="ag-theme-quartz" style="height: 500px;" [rowData]="rowData" [columnDefs]="colDefs" />
+        <ag-grid-angular class="ag-theme-quartz" style="height: 500px;" [rowData]="ProductList"
+          [columnDefs]="colDefs" />
       </c-card-body>
     </c-card>
-
   </c-col>
 </c-row>
